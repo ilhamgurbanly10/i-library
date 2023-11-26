@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    font-family: Verdana;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,15 @@
+.i-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: .8rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    outline: 0 !important;
+    border: 0;
+    cursor: pointer;
+}
+
+.i-btn.i-btn-disabled {
+    cursor: not-allowed;
+    background-color: var(--grey);
+}

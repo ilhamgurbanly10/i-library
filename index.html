@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i library</title>
+    <link rel="stylesheet" href="i-library/css/i.css">
+
+    <style>
+        @media (min-width: 1024px) {
+            #form {
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="formSection" class="i-container i-mt-6">
+        
+        <form action="" class="i-form" id="form">
+
+            <div class="i-form-group">
+                <label for="name" class="i-form-label">Name</label>
+                <input type="text" class="i-form-input" i-form-required i-form-min="5" i-form-max="10" name="name" id="name">
+                <p class="i-form-error-mes i-form-required-error-mes">This Field is Required</p>
+                <p class="i-form-error-mes i-form-range-error-mes">Min 5, max 10 character</p>
+            </div>
+
+            <div class="i-form-group i-mt-2">
+                <label for="surname" class="i-form-label">Surname</label>
+                <input type="text" class="i-form-input" i-form-required i-form-min="5" i-form-max="10" name="surname" id="surname">
+                <p class="i-form-error-mes i-form-required-error-mes">This Field is Required</p>
+                <p class="i-form-error-mes i-form-range-error-mes">Min 5, max 10 character</p>
+            </div>
+
+            <div class="i-form-group i-mt-2">
+                <button type="submit" class="i-form-group-submit i-btn">Register</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    
+    
+    <script type="module" src="i-library/js/i.js"></script>
+</body>
+</html>

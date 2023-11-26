@@ -1,0 +1,13 @@
+/* alignment */
+.i-text-center {
+    text-align: center;
+}
+
+.i-text-start {
+    text-align: left;
+}
+
+.i-text-ned {
+    text-align: right;
+}
+/* end-alignment */
