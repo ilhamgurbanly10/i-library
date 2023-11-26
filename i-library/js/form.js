@@ -5,6 +5,7 @@ class Form {
       this.className = 'i-form';
       this._requiredInputs = null;
       this._rangeInputs = null;
+      this.errorCount = 0;
     }
     
     get requiredInputs() { return this._requiredInputs; }
@@ -48,13 +49,18 @@ class Form {
     }
 
     setError(el, className) { 
+        const field = el.closest('.i-form-group');
+        if (!field.classList.contains(className)) ++this.errorCount;
         this.disableSubmit(el.closest('.i-form')); 
-        el.closest('.i-form-group').classList.add(className); 
+        field.classList.add(className); 
     }
 
     resetError(el, className) { 
-        if (!this.errorExists(el)) this.enableSubmit(el.closest('.i-form'));
-        el.closest('.i-form-group').classList.remove(className); 
+        const field = el.closest('.i-form-group');
+        if (field.classList.contains(className)) --this.errorCount;
+        console.log(this.errorCount)
+        if (this.errorCount < 1) this.enableSubmit(el.closest('.i-form'));
+        field.classList.remove(className); 
     }
 
     errorExists(el) {
