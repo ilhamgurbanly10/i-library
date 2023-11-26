@@ -58,7 +58,6 @@ class Form {
     resetError(el, className) { 
         const field = el.closest('.i-form-group');
         if (field.classList.contains(className)) --this.errorCount;
-        console.log(this.errorCount)
         if (this.errorCount < 1) this.enableSubmit(el.closest('.i-form'));
         field.classList.remove(className); 
     }
