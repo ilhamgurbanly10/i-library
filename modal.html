@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal - i library</title>
+    <link rel="stylesheet" href="i-library/css/i.css">
+
+    <style>
+
+        section > h1{
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid grey;
+        }
+
+        .html-content  { 
+            width: 100%;
+            overflow: auto;
+            background-color: black;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section class="i-container i-mt-6">
+
+        <h1 class="i-text-center">01. Modal</h1>
+
+        <button type="button" class="i-modal-btn i-btn" i-target="#myModal">Open Modal</button>
+
+        <div class="i-modal" id="myModal" i-close-on-bg-click>
+            
+            <button type="button" class="i-modal-close">
+                <svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path></svg>
+            </button>
+            
+            <div class="i-modal-content">
+                
+                <button type="button" class="i-modal-content-close">
+                    <svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path></svg>
+                </button>
+
+                <h4 class="i-modal-title">
+                    Lorem Ipsum
+                </h4>
+
+                <div class="i-modal-header i-mt-2">
+                    <p>What is Lorem Ipsum?</p>
+                </div>
+
+                <div class="i-modal-body i-mt-2">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+
+                <div class="i-modal-footer i-mt-2">
+
+                    <button type="button" class="i-modal-cancel i-btn i-btn-danger">
+                        Cancel
+                    </button>
+
+                    <button type="button" class="i-modal-ok i-btn i-ms-1">
+                        Ok
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="html-content">
+
+            <button type="button" class="i-btn copy">Copy</button>
+            <xmp>
+<button type="button" class="i-modal-btn i-btn" i-target="#myModal">Open Modal</button>
+
+<div class="i-modal" id="myModal" i-close-on-bg-click>
+    
+    <button type="button" class="i-modal-close">
+        <svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path></svg>
+    </button>
+    
+    <div class="i-modal-content">
+        
+        <button type="button" class="i-modal-content-close">
+            <svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path></svg>
+        </button>
+
+        <h4 class="i-modal-title">
+            Lorem Ipsum
+        </h4>
+
+        <div class="i-modal-header i-mt-2">
+            <p>What is Lorem Ipsum?</p>
+        </div>
+
+        <div class="i-modal-body i-mt-2">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        </div>
+
+        <div class="i-modal-footer i-mt-2">
+
+            <button type="button" class="i-modal-cancel i-btn i-btn-danger">
+                Cancel
+            </button>
+
+            <button type="button" class="i-modal-ok i-btn i-ms-1">
+                Ok
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+            </xmp>
+        </div>
+
+    </section>
+    
+    <script type="module" src="i-library/js/i.js"></script>
+
+    <script>
+        const copyBtn = document.querySelector('.copy');
+        copyBtn.addEventListener('click', function() {
+            const textarea = document.createElement('textarea');
+            textarea.value = this.closest('.html-content').querySelector('xmp').innerText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            this.innerHTML = "Copied successfully"
+        })
+        
+    </script>
+
+</body>
+</html>

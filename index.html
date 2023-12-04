@@ -14,11 +14,44 @@
                 margin-right: auto;
             }
         }
+
+        section > h1{
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid grey;
+        }
+
+        .list {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .list > * {
+            margin-right: 1rem;
+        }
+
     </style>
+
+    
 </head>
 <body>
 
-    <section id="formSection" class="i-container i-mt-6">
+    <section class="i-container i-mt-6">
+
+        <h1 class="i-text-center">i library</h1>
+
+        <div class="list">
+
+            <a href="modal.html" class="i-btn">01. Modal</a>
+            <!-- <a href="form.html" class="i-btn">02. Form</a> -->
+       
+        </div>
+        
+    </section>
+
+    <!-- <section id="formSection" class="i-container i-mt-6">
         
         <form action="" class="i-form" id="form">
 
@@ -37,12 +70,21 @@
             </div>
 
             <div class="i-form-group i-mt-2">
+                <label for="name" class="i-form-label">Country</label>
+                <select name="country" id="country" class="i-form-select" i-form-placeholder="Select a country...">
+                    <option value="Azerbaijan1">Azerbaijan</option>
+                    <option value="German1">German</option>
+                    <option value="Spanish1">Spanish</option>
+                </select>
+            </div>
+
+            <div class="i-form-group i-mt-2">
                 <button type="submit" class="i-form-group-submit i-btn">Register</button>
             </div>
 
         </form>
 
-    </section>
+    </section> -->
 
     
     

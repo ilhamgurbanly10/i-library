@@ -16,6 +16,59 @@ class Form {
 
     set rangeInputs(form) { this._rangeInputs = form.querySelectorAll('.i-form-input[i-form-min], .i-form-input[i-form-max]');  }
 
+    createSelects(form) {
+
+        const selects = form.querySelectorAll('.i-form-select');
+
+        selects.forEach((select) => {
+            this.createSelect(select, select.closest('.i-form-group'), select.options, select.getAttribute('i-form-placeholder'));
+        });
+
+    }
+
+    createSelect(el, par, options, _placeholder) {
+
+        const select = document.createElement('div');
+        select.className = "i-form-select-container";
+
+        const dropdown = document.createElement('div');
+        dropdown.className = "i-form-select-dropdown";
+
+        const area = document.createElement('div');
+        area.className = "i-form-select-area";
+        area.addEventListener('click', () => {
+            dropdown.classList.toggle('i-show');
+        })
+
+        const placeholder = document.createElement('div');
+        placeholder.className = "i-form-select-placeholder";
+        placeholder.innerHTML = _placeholder;
+        
+        for (let i = 0; i < options.length; i++) {
+            const option = document.createElement('button');
+            option.className = "i-form-select-option";
+            option.setAttribute('value', options[i].value);
+            option.setAttribute('type', 'button');
+            option.innerHTML = options[i].text;
+            option.addEventListener('click', (e) => {
+                for (let y = 0; y < options.length; y++) {
+                    options[y].classList.remove('i-active')
+                }
+                e.target.classList.add('i-active');
+                el.value = options[i].value;
+            })
+            dropdown.appendChild(option);
+        }
+
+        area.appendChild(placeholder);
+        area.appendChild(dropdown)
+
+        select.appendChild(area);
+
+        
+        par.appendChild(select);
+    }
+
     handleRequirement(e) { this.isEmpty(e.target.value) ? this.setError(e.target, "i-form-required-error") : this.resetError(e.target, "i-form-required-error"); }
 
     handleRequirementOnSubmit(e) {
@@ -103,6 +156,12 @@ const iForm = () => {
         form.rangeInputs.forEach((input) => {
             input.addEventListener('input', form.handleRange.bind(form))
         })
+
+        // selects
+        const selects = form.createSelects(el); 
+        // selects.forEach((select) => {
+        //     console.log(select);
+        // })
     }
 
     form.allForms.forEach((item) => { setActions(item); });

@@ -3,4 +3,8 @@
     --red: red;
     --blue: blue;
     --white: white;
+    --lightgrey: rgb(165, 164, 164);
+    --timeSm: .3s;
+    --overlayColor: rgba(0, 0, 0, .5);
+    --modalLayer: 9999999999;
 }
